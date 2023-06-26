@@ -1,0 +1,22 @@
+.marg{
+      margin:0;
+      padding:0;
+}
+
+.card-body
+{
+      width:476px;
+      height:300px;
+     background-image: url(pic2.jpg);
+     margin:0 auto;
+ 
+
+}
+
+.card-body1
+{
+      width:476px;
+      height:300px;
+     background-image: url(pic3.jpg);
+     margin:0 auto;
+}
