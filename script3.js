@@ -6,32 +6,47 @@ const options = {
 	}
 };
 
-const getairquality = (city)=>{
-	cityName2.innerHTML = city
+const getWeather = (city)=>{
+	cityName.innerHTML = city
+	cityName1.innerHTML = city
 
-fetch('https://air-quality-by-api-ninjas.p.rapidapi.com/v1/airquality?city=' + city, options)
+fetch('https://weather-by-api-ninjas.p.rapidapi.com/v1/weather?city=' + city , options)
 	.then(response => response.json())
 	.then((response) => {
 	
 	     console.log(response)
 
-			 concentration.innerHTML= response.concentration
-			 aqi.innerHTML=response.aqi
+			  cloud_pct.innerHTML = response.cloud_pct
+			cloud_pct1.innerHTML = response.cloud_pct                            
+
+			temp.innerHTML = response.temp
+			
+			temp2.innerHTML = response.temp
+
+			feels_like.innerHTML = response.feels_like
+			feels_like1.innerHTML = response.feels_like
+
+			humidity.innerHTML = response.humidity
+			humidity1.innerHTML = response.humidity
+
+			min_temp.innerHTML = response.min_temp
+			min_temp1.innerHTML = response.min_temp
+
+			max_temp.innerHTML = response.max_temp
+			max_temp1.innerHTML = response.max_temp
+
+			wind_speed.innerHTML = response.wind_speed
+			wind_speed1.innerHTML = response.wind_speed
 			 
-			 concentration1.innerHTML= response.concentration
-			 aqi1.innerHTML=response.aqi
-			 
-			 concentration2.innerHTML= response.concentration
-			 aqi2.innerHTML=response.aqi
-			 
-			 concentration3.innerHTML= response.concentration
-			 aqi3.innerHTML=response.aqi
-			 
-			 concentration4.innerHTML= response.concentration
-			 aqi4.innerHTML=response.aqi
-			 
-			 concentration5.innerHTML= response.concentration
-			 aqi5.innerHTML=response.aqi
+
+			wind_degrees.innerHTML = response.wind_degrees
+			wind_degrees1.innerHTML = response.wind_degrees
+
+			sunrise.innerHTML = response.sunrise
+			sunrise1.innerHTML = response.sunrise
+
+			sunset.innerHTML = response.sunset
+			sunset1.innerHTML = response.sunset
 		
 		})
 
@@ -41,6 +56,6 @@ fetch('https://air-quality-by-api-ninjas.p.rapidapi.com/v1/airquality?city=' + c
 
 	submit.addEventListener("click", (e)=>{
 		e.preventDefault()
-	 getairquality(city.value)
+	 getWeather(city.value)
 	})
-	  getairquality("Delhi")
+	  getWeather("Delhi")
