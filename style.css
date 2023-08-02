@@ -5,18 +5,23 @@
 
 .card-body
 {
-      width:476px;
-      height:300px;
+      max-width:100%;
+    max-height:60%;
+    display:block;
      background-image: url(pic2.jpg);
-     margin:0 auto;
+     
  
 
 }
 
 .card-body1
 {
-      width:476px;
-      height:300px;
+      max-width:100%;
+    max-height:100%;
+    display:block;
      background-image: url(pic3.jpg);
-     margin:0 auto;
+     
+}
+p{
+    font-size:2vw;
 }
